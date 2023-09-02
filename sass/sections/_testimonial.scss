@@ -1,0 +1,23 @@
+.testimonial {
+  .container {
+    .testimonial-content {
+      /* margin-block-end: 3em; */
+      gap: 0;
+    }
+
+    .testimonial-card {
+      ion-icon {
+        color: $tertiary-neutral;
+      }
+    }
+
+    ul {
+      gap: 3em;
+    }
+
+    .testimonial-label {
+      margin-block-start: 2em;
+      gap: 1em;
+    }
+  }
+}

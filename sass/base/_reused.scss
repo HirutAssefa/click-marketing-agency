@@ -1,0 +1,234 @@
+/*
+phone: 575px, 35.9375em
+tablet: 768px, 48em
+laptop: 992px, 62em
+desktop: 1200px, 75em
+bg-desktop: 1400px,87.5em
+*/
+
+.container {
+  padding-inline: 1.6em;
+  margin-inline: auto;
+
+  @include respond(phone) {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  @include respond(tablet) {
+    max-width: 720px;
+  }
+
+  @include respond(laptop) {
+    max-width: 960px;
+    padding-inline: 4em;
+  }
+
+  @include respond(desktop) {
+    max-width: 1140px;
+  }
+
+  @include respond(bg-desktop) {
+    max-width: 1350px;
+  }
+}
+
+.section {
+  padding-block-end: $section-spacing;
+
+  @include respond(tablet) {
+    padding-block-end: 7em;
+  }
+}
+
+.bold {
+  font-weight: $fw-bold;
+}
+
+.header-spacing {
+  margin-block-end: $header-spacing;
+}
+
+.title {
+  color: $primary-txt-clr;
+  line-height: 1.2;
+}
+
+.h1 {
+  font-size: $font-size-h1-s;
+  line-height: 1.2;
+  @include respond(tablet) {
+    font-size: $font-size-h1-m;
+  }
+
+  @include respond(laptop) {
+    font-size: $font-size-h1-mx;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h1-mxx;
+  }
+
+  @include respond(bg-desktop) {
+    font-size: $font-size-h1-l;
+  }
+}
+
+.h2 {
+  font-size: $font-size-h2-sx;
+  font-weight: $fw-medium;
+  line-height: 1.1;
+
+  @include respond(tablet) {
+    font-size: $font-size-h2-s;
+  }
+
+  @include respond(laptop) {
+    font-size: $font-size-h2-m;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h2-l;
+  }
+
+  @include respond(bg-desktop) {
+    font-size: $font-size-h2-xl;
+  }
+}
+
+.h3 {
+  font-size: $font-size-h3-sx;
+  font-weight: $fw-regular;
+  line-height: 1;
+
+  @include respond(tablet) {
+    font-size: $font-size-h3-s;
+  }
+
+  @include respond(laptop) {
+    font-size: $font-size-h3-m;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h3-l;
+  }
+
+  @include respond(bg-desktop) {
+    font-size: $font-size-h3-xl;
+  }
+}
+
+.h4 {
+  font-size: $font-size-h4-s;
+
+  @include respond(laptop) {
+    font-size: $font-size-h4-m;
+  }
+
+  @include respond(desktop) {
+    font-size: $font-size-h4-l;
+  }
+
+  @include respond(bg-desktop) {
+    font-size: $font-size-h4-xl;
+  }
+}
+
+.btn {
+  background-color: $tertiary-neutral;
+  height: 3em;
+  padding-inline: 2em;
+  font-weight: $fw-medium;
+  border-radius: $radius-500;
+  color: $primary-txt-clr;
+  place-content: center;
+  max-width: max-content;
+  transition: $transition-1;
+}
+
+.btn-primary:is(:hover, :focus-visible) {
+  background-color: $secondary-bg-cl;
+  color: $secondary-txt-clr;
+}
+
+.btn-secondary {
+  display: none;
+  background-color: $blue-bg-cl;
+
+  &:hover {
+    background-color: $tertiary-bg-cl;
+    color: $secondary-txt-clr;
+  }
+
+  &:focus {
+    outline: 2px solid $tertiary-bg-cl;
+  }
+
+  @include respond(tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-text {
+  margin-block-end: 3em;
+
+  @include respond(tablet) {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  @include respond(desktop) {
+    max-width: 750px;
+  }
+
+  @include respond(bg-desktop) {
+    margin-block-end: 6em;
+  }
+}
+
+.grid-list {
+  display: grid;
+  gap: 5em;
+  @include respond(tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  flex-wrap: wrap;
+}
+
+.img-holder {
+  /* aspect-ratio: var(--width) / var(--height);
+  background-color: $bg-white-alpha-10; */
+  overflow: hidden;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: $transition-2;
+}
+
+figure {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}

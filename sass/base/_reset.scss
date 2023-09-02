@@ -1,0 +1,158 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Remove default margin */
+*,
+*::before,
+*::after,
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Avoid text overflows */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove list styles on ul, ol elements  */
+ul,
+ol {
+  list-style: none;
+}
+
+/* allow percentage-based heights n the application */
+
+html {
+  height: 100%;
+  /* Set core root defaults */
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+body {
+  min-height: 100vh;
+  /*  padding-top: 5em; */
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Remove default settings */
+a,
+button,
+form,
+input {
+  border: none;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: none;
+  box-shadow: none;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* styles applied for this project only */
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  height: auto;
+}
+
+input {
+  width: 100%;
+}
+
+ion-icon {
+  pointer-events: none;
+}
+
+address {
+  font-style: normal;
+}
+
+ul {
+  margin-block: 0;
+  padding-inline-start: 0;
+}
+
+body {
+  font-family: $font-family;
+  color: $primary-txt-clr;
+  font-size: $font-size-s;
+  line-height: 1.8;
+  /* prevent overlap with fixed header and navigation */
+  padding-block-start: 4em;
+  background-color: $white-bg-cl;
+}

@@ -1,0 +1,72 @@
+.footer {
+  font-size: $font-size-xxs;
+  line-height: 2;
+  color: $secondary-txt-clr;
+
+  .container {
+    gap: 3em;
+
+    @include respond(tablet) {
+      grid-template-columns: 1fr;
+    }
+    .footer-top {
+      background-color: $secondary-bg-cl;
+      border-radius: $radius-40;
+      padding: 30px;
+      gap: 3em;
+
+      @include respond(tablet) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 9em;
+      }
+
+      .footer-logo {
+        align-items: flex-start;
+        gap: 1.8em;
+
+        img {
+          width: 140px;
+          height: auto;
+        }
+
+        .social-list {
+          flex-direction: row;
+          gap: 1em;
+        }
+      }
+
+      .company {
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 1em;
+
+        h4 {
+          font-weight: $fw-bold;
+        }
+      }
+
+      .lets-talk {
+        align-items: flex-start;
+        gap: 1em;
+
+        a {
+          display: block;
+        }
+      }
+
+      .contact {
+        align-items: flex-start;
+        gap: 1em;
+      }
+
+      ion-icon {
+        color: $tertiary-neutral;
+        margin-right: 18px;
+      }
+    }
+
+    .footer-bottom {
+      color: $grey-txt-clr;
+    }
+  }
+}

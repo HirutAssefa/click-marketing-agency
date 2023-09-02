@@ -1,0 +1,52 @@
+/* trusted end */
+
+.trusted-by {
+  .container {
+    display: grid;
+    gap: 3em;
+    justify-content: center;
+
+    .partner-logos {
+      margin-block-end: 2em;
+
+      @include respond(tablet) {
+        flex-direction: row;
+      }
+
+      @include respond(laptop) {
+        column-gap: 9em;
+        row-gap: 1em;
+      }
+      .partner {
+        border-radius: 0.7em;
+      }
+
+      .partner-img {
+        width: 300px;
+        height: 300px;
+      }
+    }
+
+    .counting-container {
+      @include respond(tablet) {
+        flex-direction: row;
+        gap: 7em;
+      }
+
+      .counting-wrapper {
+        @include respond(tablet) {
+          border-right: 4px solid $tertiary-neutral;
+          padding-inline-end: 2em;
+        }
+
+        p {
+          font-size: $font-size-xm;
+        }
+        .counter {
+          font-size: 5rem;
+          font-weight: $fw-medium;
+        }
+      }
+    }
+  }
+}

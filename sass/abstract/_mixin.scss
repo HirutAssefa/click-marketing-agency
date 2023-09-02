@@ -1,0 +1,37 @@
+/* media queries */
+
+/*
+phone: 575px,
+tablet: 768px,
+laptop: 992px,
+desktop: 1200px
+bg-desktop: 1400px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media only screen and (min-width: 35.9375em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media only screen and (min-width: 48em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (min-width: 62em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == bg-desktop {
+    @media only screen and (min-width: 87.5em) {
+      @content;
+    }
+  }
+}

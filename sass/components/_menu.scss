@@ -1,0 +1,21 @@
+.menu--open .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu--open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu--open .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.menu {
+  .bar {
+    width: 24px;
+    height: 1.5px;
+    background: $white-bg-cl;
+    margin: 5px 0;
+    transition: $transition-2;
+  }
+}

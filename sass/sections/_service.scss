@@ -1,0 +1,43 @@
+.service {
+  .container {
+    li {
+      padding: 2em;
+    }
+
+    .grid-list {
+      gap: 2em;
+      @include respond(laptop) {
+        gap: 3em 4em;
+      }
+
+      @include respond(bg-desktop) {
+        row-gap: 5em;
+      }
+
+      .service-item {
+        box-shadow: $box-shadow-service;
+        border-radius: $radius-24;
+        ion-icon {
+          width: 40px;
+          height: 40px;
+          color: $tertiary-neutral;
+        }
+        .item-icon {
+          margin-inline: auto;
+
+          @include respond(laptop) {
+            margin-inline: 0;
+          }
+        }
+
+        .item-title {
+          margin-block: 2em 1em;
+
+          @include respond(bg-desktop) {
+            margin-block: 2.5em 1.5em;
+          }
+        }
+      }
+    }
+  }
+}

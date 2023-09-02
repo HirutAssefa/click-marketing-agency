@@ -1,0 +1,32 @@
+.choose-us {
+  .container {
+    .grid-list {
+      gap: 3em;
+      @include respond(laptop) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .choose-card {
+        .choose-banner {
+          border-radius: $radius-24;
+          margin-block-end: 2.4em;
+          &:is(:hover, :focus-within),
+          .img-cover {
+            transform: scale(1.1);
+          }
+        }
+
+        .choose-title {
+          display: block;
+          transition: $transition-1;
+          margin-block-end: 1em;
+          color: $primary-txt-clr;
+
+          &:is(:hover, :focus-visible) {
+            color: $secondary-bg-cl;
+          }
+        }
+      }
+    }
+  }
+}
