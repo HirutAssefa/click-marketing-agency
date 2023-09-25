@@ -1,6 +1,10 @@
 .hero {
-  padding-top: 6em;
-  padding-block-start: 6em;
+  margin-top: 6em;
+  margin-block-start: 6em;
+
+  @include respond(tablet) {
+    margin-top: 10em;
+  }
 
   .container {
     -webkit-display: grid;

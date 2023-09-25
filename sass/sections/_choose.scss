@@ -1,18 +1,19 @@
 .choose-us {
   .container {
     .grid-list {
-      gap: 3em;
       -ms-gap: 3em;
       -moz-gap: 3em;
       -webkit-gap: 3em;
       -o-gap: 3em;
+      gap: 3em;
 
       @include respond(laptop) {
-        grid-template-columns: repeat(3, 1fr);
+
         -ms-grid-columns: repeat(3, 1fr);
         -moz-grid-columns: repeat(3, 1fr);
         -webkit-grid-columns: repeat(3, 1fr);
         -o-grid-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
 
       .choose-card {

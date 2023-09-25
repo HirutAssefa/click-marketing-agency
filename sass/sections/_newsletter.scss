@@ -1,21 +1,23 @@
 .newsletter {
+  margin-top: 3em;
   .container {
-    display: grid;
     -ms-display: grid;
     -moz-display: grid;
     -webkit-display: grid;
     -o-display: grid;
-    grid-template-columns: 1fr;
+    display: grid;
+
     -ms-grid-columns: 1fr;
     -moz-grid-columns: 1fr;
     -webkit-grid-columns: 1fr;
     -o-grid-columns: 1fr;
-    justify-content: center;
+    grid-template-columns: 1fr;
+
     -ms-justify-content: center;
     -moz-justify-content: center;
     -webkit-justify-content: center;
     -o-justify-content: center;
-
+    justify-content: center;
     p {
       margin-bottom: 2em;
       margin-block-end: 2em;
@@ -44,6 +46,9 @@
       }
 
       .btn {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: -ms-fit-content;
         width: fit-content;
         display: block;
         margin: 0 auto;

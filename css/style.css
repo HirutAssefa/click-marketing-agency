@@ -1319,19 +1319,19 @@ figure {
 }
 
 .choose-us .container .grid-list {
-  gap: 3em;
   -ms-gap: 3em;
   -moz-gap: 3em;
   -webkit-gap: 3em;
   -o-gap: 3em;
+  gap: 3em;
 }
 @media only screen and (min-width: 62em) {
   .choose-us .container .grid-list {
-    grid-template-columns: repeat(3, 1fr);
     -ms-grid-columns: repeat(3, 1fr);
     -moz-grid-columns: repeat(3, 1fr);
     -webkit-grid-columns: repeat(3, 1fr);
     -o-grid-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .choose-us .container .grid-list .choose-card .choose-banner {
@@ -1368,8 +1368,13 @@ figure {
 }
 
 .hero {
-  padding-top: 6em;
-  padding-block-start: 6em;
+  margin-top: 6em;
+  margin-block-start: 6em;
+}
+@media only screen and (min-width: 48em) {
+  .hero {
+    margin-top: 10em;
+  }
 }
 .hero .container {
   -webkit-display: grid;
@@ -1604,22 +1609,25 @@ figure {
     transform: scale(1.2);
   }
 }
+.newsletter {
+  margin-top: 3em;
+}
 .newsletter .container {
-  display: grid;
   -ms-display: grid;
   -moz-display: grid;
   -webkit-display: grid;
   -o-display: grid;
-  grid-template-columns: 1fr;
+  display: grid;
   -ms-grid-columns: 1fr;
   -moz-grid-columns: 1fr;
   -webkit-grid-columns: 1fr;
   -o-grid-columns: 1fr;
-  justify-content: center;
+  grid-template-columns: 1fr;
   -ms-justify-content: center;
   -moz-justify-content: center;
   -webkit-justify-content: center;
   -o-justify-content: center;
+  justify-content: center;
 }
 .newsletter .container p {
   margin-bottom: 2em;
@@ -1646,6 +1654,9 @@ figure {
   padding: 0 5%;
 }
 .newsletter .container .input-wrapper .btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: -ms-fit-content;
   width: fit-content;
   display: block;
   margin: 0 auto;
