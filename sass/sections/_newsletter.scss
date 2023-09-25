@@ -1,15 +1,41 @@
 .newsletter {
   .container {
     display: grid;
+    -ms-display: grid;
+    -moz-display: grid;
+    -webkit-display: grid;
+    -o-display: grid;
     grid-template-columns: 1fr;
+    -ms-grid-columns: 1fr;
+    -moz-grid-columns: 1fr;
+    -webkit-grid-columns: 1fr;
+    -o-grid-columns: 1fr;
     justify-content: center;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -o-justify-content: center;
+
     p {
+      margin-bottom: 2em;
       margin-block-end: 2em;
     }
+
     .input-wrapper {
+      -ms-display: block;
+      -moz-display: block;
+      -webkit-display: block;
+      -o-display: block;
       display: block;
+
       input {
+        -ms-border-radius: $radius-500;
+        -moz-border-radius: $radius-500;
+        -webkit-border-radius: $radius-500;
+        -o-border-radius: $radius-500;
         border-radius: $radius-500;
+
+        margin-bottom: 1.6em;
         margin-block-end: 1.6em;
         border: 1px solid $tertiary-neutral;
         width: 300px;

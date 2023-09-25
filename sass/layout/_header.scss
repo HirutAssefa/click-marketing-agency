@@ -2,13 +2,23 @@
 .header {
   background-color: $secondary-bg-cl;
   position: fixed;
+  -moz-z-index: 9999;
+  -webkit-z-index: 9999;
+  -o-z-index: 9999;
+  -ms-z-index: 9999;
   z-index: 9999;
   width: 100%;
   top: 0;
 
   .container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
+    justify-content: -ms-flex-end;
+    justify-content: -webkit-flex-end;
     justify-content: flex-end;
+    align-items: -ms-center;
+    align-items: -webkit-center;
     align-items: center;
     padding: 1em 1.6em;
 
@@ -23,6 +33,10 @@
     }
 
     &:not(.logo) {
+      -ms-gap: 2em;
+      -moz-gap: 2em;
+      -webkit-gap: 2em;
+      -o-gap: 2em;
       gap: 2em;
     }
 
@@ -30,19 +44,39 @@
       position: absolute;
       right: 0;
       top: 4em;
+      -ms-z-index: -1;
+      -moz-z-index: -1;
+      -webkit-z-index: -1;
+      -o-z-index: -1;
       z-index: -1;
       background-color: $secondary-bg-cl;
       width: 100%;
       padding: 1em 0 2em;
+      -ms-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
       transform: translateX(-100%);
+      -ms-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out;
 
       @include respond(laptop) {
+        -ms-all: unset;
+        -moz-all: unset;
+        -webkit-all: unset;
+        -o-all: unset;
         all: unset;
       }
 
       .nav__link {
         color: $secondary-txt-clr;
+        -ms-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
         transition: all 0.4s ease-in-out;
 
         &:hover,
@@ -52,17 +86,37 @@
       }
 
       .nav__list {
+        display: -ms-flexbox;
+        display: -webkit-flex;
         display: flex;
+        flex-direction: -ms-column;
+        flex-direction: -webkit-column;
         flex-direction: column;
+        align-items: -ms-center;
+        align-items: -webkit-center;
         align-items: center;
+        -ms-gap: 1em;
+        -moz-gap: 1em;
+        -webkit-gap: 1em;
+        -o-gap: 1em;
         gap: 1em;
 
         @include respond(laptop) {
+          -ms-all: unset;
+          -moz-all: unset;
+          -webkit-all: unset;
+          -o-all: unset;
           all: unset;
         }
 
         @include respond(laptop) {
+          display: -ms-flexbox;
+          display: -webkit-flex;
           display: flex;
+          -ms-gap: 2em;
+          -moz-gap: 2em;
+          -webkit-gap: 2em;
+          -o-gap: 2em;
           gap: 2em;
           list-style-type: none;
         }
@@ -71,6 +125,8 @@
 
     .menu {
       display: block;
+      cursor: -ms-pointer;
+      cursor: -webkit-pointer;
       cursor: pointer;
 
       @include respond(laptop) {
@@ -81,5 +137,7 @@
 }
 
 .nav--open {
+  transform: -ms-translate(0) !important;
+  transform: -webkit-translate(0) !important;
   transform: translate(0) !important;
 }

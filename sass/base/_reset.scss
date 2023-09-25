@@ -4,8 +4,9 @@
 *::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
 }
 
 /* Remove default margin */
@@ -45,11 +46,12 @@ ol {
   list-style: none;
 }
 
-/* allow percentage-based heights n the application */
+/* allow percentage-based heights in the application */
 
 html {
   height: 100%;
-  /* Set core root defaults */
+  -webkit-scroll-behavior: smooth; /* Webkit prefix */
+  -ms-scroll-behavior: smooth; /* IE prefix */
   scroll-behavior: smooth;
 }
 
@@ -57,7 +59,6 @@ html {
 
 body {
   min-height: 100vh;
-  /*  padding-top: 5em; */
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -65,6 +66,11 @@ body {
 
 a,
 button {
+  /* vendor prefix */
+  cursor: -webkit-pointer; /* Safari and Chrome */
+  cursor: -moz-pointer; /* Firefox */
+  cursor: -ms-pointer; /* Internet Explorer */
+  cursor: -o-pointer; /* Opera */
   cursor: pointer;
 }
 
@@ -78,8 +84,15 @@ button,
 form,
 input {
   border: none;
+  outline: -webkit-none; /* Safari and Chrome */
+  outline: -moz-none; /* Firefox */
+  outline: -ms-none; /* Internet Explorer */
+  outline: -o-none; /* Opera */
   outline: none;
   -webkit-user-select: none;
+  -webkit-user-select: none; /* Safari and Chrome */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none;
   background: none;
   box-shadow: none;
@@ -93,6 +106,8 @@ canvas,
 svg {
   max-width: 100%;
   display: block;
+  -o-object-fit: cover; /* Opera prefix */
+  -webkit-object-fit: cover; /* Webkit prefix */
   object-fit: cover;
 }
 
@@ -107,16 +122,20 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
+    -webkit-scroll-behavior: auto; /* Webkit prefix */
+    -ms-scroll-behavior: auto; /* IE prefix */
     scroll-behavior: auto;
   }
 
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+    -webkit-animation-duration: 0.01ms !important; /* Webkit prefix */
+    -webkit-transition-duration: 0.01ms !important; /* Webkit prefix */
+    animation-duration: 0.01ms !important;
   }
 }
 
@@ -135,6 +154,9 @@ input {
 }
 
 ion-icon {
+  -webkit-pointer-events: none; /* Safari and Chrome */
+  -moz-pointer-events: none; /* Firefox */
+  -ms-pointer-events: none; /* Internet Explorer/Edge */
   pointer-events: none;
 }
 
@@ -153,6 +175,7 @@ body {
   font-size: $font-size-s;
   line-height: 1.8;
   /* prevent overlap with fixed header and navigation */
+  padding-top: 4em;
   padding-block-start: 4em;
   background-color: $white-bg-cl;
 }

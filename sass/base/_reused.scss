@@ -7,7 +7,11 @@ bg-desktop: 1400px,87.5em
 */
 
 .container {
+  padding-left: 1.6em;
+  padding-right: 1.6em;
   padding-inline: 1.6em;
+  margin-left: auto;
+  margin-right: auto;
   margin-inline: auto;
 
   @include respond(phone) {
@@ -21,6 +25,8 @@ bg-desktop: 1400px,87.5em
 
   @include respond(laptop) {
     max-width: 960px;
+    padding-left: 4em;
+    padding-right: 4em;
     padding-inline: 4em;
   }
 
@@ -34,9 +40,11 @@ bg-desktop: 1400px,87.5em
 }
 
 .section {
+  padding-bottom: $section-spacing;
   padding-block-end: $section-spacing;
 
   @include respond(tablet) {
+    padding-bottom: 7em;
     padding-block-end: 7em;
   }
 }
@@ -46,6 +54,7 @@ bg-desktop: 1400px,87.5em
 }
 
 .header-spacing {
+  margin-bottom: $header-spacing;
   margin-block-end: $header-spacing;
 }
 
@@ -137,12 +146,27 @@ bg-desktop: 1400px,87.5em
 .btn {
   background-color: $tertiary-neutral;
   height: 3em;
+  /* fallback */
+  padding-left: 2rem;
+  padding-right: 2rem;
   padding-inline: 2em;
   font-weight: $fw-medium;
+  -moz-border-radius: $radius-500; /* Firefox */
+  -webkit-border-radius: $radius-500; /* Webkit (Safari, Chrome) */
+  -o-border-radius: $radius-500; /* Opera */
+  -ms-border-radius: $radius-500; /* Internet Explorer */
   border-radius: $radius-500;
   color: $primary-txt-clr;
+  -moz-place-content: center; /* Firefox */
+  -webkit-place-content: center; /* Webkit (Safari, Chrome) */
+  -o-place-content: center; /* Opera */
+  -ms-place-content: center; /* Internet Explorer */
   place-content: center;
   max-width: max-content;
+  -moz-transition: $transition-1; /* Firefox */
+  -webkit-transition: $transition-1; /* Webkit (Safari, Chrome) */
+  -o-transition: $transition-1; /* Opera */
+  -ms-transition: $transition-1; /* Internet Explorer */
   transition: $transition-1;
 }
 
@@ -161,12 +185,28 @@ bg-desktop: 1400px,87.5em
   }
 
   &:focus {
+    -moz-outline: 2px solid $tertiary-bg-cl; /* Firefox */
+    -webkit-outline: 2px solid $tertiary-bg-cl; /* Webkit (Safari, Chrome) */
+    -o-outline: 2px solid $tertiary-bg-cl; /* Opera */
+    -ms-outline: 2px solid $tertiary-bg-cl; /* Internet Explorer */
     outline: 2px solid $tertiary-bg-cl;
   }
 
   @include respond(tablet) {
+    -moz-display: flex;
+    -webkit-display: flex;
+    -o-display: flex;
+    -ms-display: flex;
     display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
     justify-content: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center;
     align-items: center;
   }
 }
@@ -180,10 +220,13 @@ bg-desktop: 1400px,87.5em
 }
 
 .section-text {
+  margin-bottom: 3em;
   margin-block-end: 3em;
 
   @include respond(tablet) {
     max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     margin-inline: auto;
   }
 
@@ -192,37 +235,66 @@ bg-desktop: 1400px,87.5em
   }
 
   @include respond(bg-desktop) {
+    margin-bottom: 6rem;
     margin-block-end: 6em;
   }
 }
 
 .grid-list {
+  display: -ms-grid;
+  display: -webkit-grid;
   display: grid;
+  -ms-gap: 5em;
+  -moz-gap: 5em;
+  -webkit-gap: 5em;
+  -o-gap: 5em;
   gap: 5em;
   @include respond(tablet) {
+    -ms-grid-columns: 1fr 1fr;
+    -moz-grid-template-columns: 1fr 1fr;
+    -webkit-grid-template-columns: 1fr 1fr;
+    -o-grid-template-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 .flex {
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
+  flex-direction: -ms-column;
+  flex-direction: -webkit-column;
   flex-direction: column;
+  align-items: -ms-center;
+  align-items: -webkit-center;
   align-items: center;
+  justify-content: -ms-center;
+  justify-content: -webkit-center;
   justify-content: center;
+  -ms-gap: 3em;
+  -moz-gap: 3em;
+  -webkit-gap: 3em;
+  -o-gap: 3em;
   gap: 3em;
+  flex-wrap: -ms-wrap;
+  flex-wrap: -webkit-wrap;
   flex-wrap: wrap;
 }
 
 .img-holder {
-  /* aspect-ratio: var(--width) / var(--height);
-  background-color: $bg-white-alpha-10; */
   overflow: hidden;
 }
 
 .img-cover {
   width: 100%;
   height: 100%;
+  object-fit: -ms-cover;
+  object-fit: -webkit-cover;
   object-fit: cover;
+  -moz-transition: $transition-2;
+  -webkit-transition: $transition-2;
+  -o-transition: $transition-2;
+  -ms-transition: $transition-2;
   transition: $transition-2;
 }
 

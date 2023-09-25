@@ -1,7 +1,10 @@
 .testimonial {
   .container {
     .testimonial-content {
-      /* margin-block-end: 3em; */
+      -ms-gap: 0;
+      -moz-gap: 0;
+      -webkit-gap: 0;
+      -o-gap: 0;
       gap: 0;
     }
 
@@ -12,11 +15,20 @@
     }
 
     ul {
+      -ms-gap: 3em;
+      -moz-gap: 3em;
+      -webkit-gap: 3em;
+      -o-gap: 3em;
       gap: 3em;
     }
 
     .testimonial-label {
+      margin-top: 2em;
       margin-block-start: 2em;
+      -ms-gap: 1em;
+      -moz-gap: 1em;
+      -webkit-gap: 1em;
+      -o-gap: 1em;
       gap: 1em;
     }
   }

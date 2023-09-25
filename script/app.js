@@ -58,3 +58,21 @@ window.addEventListener('scroll', () => {
     startCountingAnimation();
   }
 });
+
+/* REVEAL EFFECT START */
+const revealElements = document.querySelectorAll('.reveal');
+
+function checkScroll() {
+  revealElements.forEach((element) => {
+    const elementTop = element.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (elementTop < windowHeight - 100) {
+      element.style.opacity = '1';
+      element.style.transform = 'translateY(0)';
+    }
+  });
+}
+
+window.addEventListener('scroll', checkScroll);
+/* REVEAL EFFECT END */

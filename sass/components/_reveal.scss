@@ -1,0 +1,18 @@
+/* Elements to be revealed */
+.reveal {
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  -o-opacity: 0;
+  -ms-opacity: 0;
+  opacity: 0;
+  -moz-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -moz-transition: opacity 0.5s, -moz-transform 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  -o-transition: opacity 0.5s, -o-transform 0.5s;
+  -ms-transition: opacity 0.5s, -ms-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+}

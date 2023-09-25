@@ -2,27 +2,53 @@
   .container {
     .grid-list {
       gap: 3em;
+      -ms-gap: 3em;
+      -moz-gap: 3em;
+      -webkit-gap: 3em;
+      -o-gap: 3em;
+
       @include respond(laptop) {
         grid-template-columns: repeat(3, 1fr);
+        -ms-grid-columns: repeat(3, 1fr);
+        -moz-grid-columns: repeat(3, 1fr);
+        -webkit-grid-columns: repeat(3, 1fr);
+        -o-grid-columns: repeat(3, 1fr);
       }
 
       .choose-card {
         .choose-banner {
+          -ms-border-radius: $radius-24;
+          -moz-border-radius: $radius-24;
+          -webkit-border-radius: $radius-24;
+          -o-border-radius: $radius-24;
           border-radius: $radius-24;
+          margin-bottom: 2.4em;
           margin-block-end: 2.4em;
-          &:is(:hover, :focus-within),
-          .img-cover {
-            transform: scale(1.1);
-          }
+        }
+
+        .choose-banner:hover,
+        .choose-banner:focus-within,
+        .choose-card .img-cover {
+          -ms-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -webkit-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1);
         }
 
         .choose-title {
           display: block;
+          -ms-transition: $transition-1;
+          -moz-transition: $transition-1;
+          -webkit-transition: $transition-1;
+          -o-transition: $transition-1;
           transition: $transition-1;
+          margin-bottom: 1em;
           margin-block-end: 1em;
           color: $primary-txt-clr;
 
-          &:is(:hover, :focus-visible) {
+          &:hover,
+          &:focus-visible {
             color: $secondary-bg-cl;
           }
         }

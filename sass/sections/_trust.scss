@@ -3,21 +3,46 @@
 .trusted-by {
   .container {
     display: grid;
+    -ms-gap: 3em;
+    -moz-gap: 3em;
+    -webkit-gap: 3em;
+    -o-gap: 3em;
     gap: 3em;
+    -ms-justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -o-justify-content: center;
     justify-content: center;
 
     .partner-logos {
+      margin-bottom: 2em;
       margin-block-end: 2em;
 
       @include respond(tablet) {
+        -ms-flex-direction: row;
+        -moz-flex-direction: row;
+        -webkit-flex-direction: row;
+        -o-flex-direction: row;
         flex-direction: row;
       }
 
       @include respond(laptop) {
+        -ms-column-gap: 9em;
+        -moz-column-gap: 9em;
+        -webkit-column-gap: 9em;
+        -o-column-gap: 9em;
         column-gap: 9em;
+        -ms-row-gap: 1em;
+        -moz-row-gap: 1em;
+        -webkit-row-gap: 1em;
+        -o-row-gap: 1em;
         row-gap: 1em;
       }
       .partner {
+        -ms-border-radius: 0.7em;
+        -moz-border-radius: 0.7em;
+        -webkit-border-radius: 0.7em;
+        -o-border-radius: 0.7em;
         border-radius: 0.7em;
       }
 
@@ -29,17 +54,34 @@
 
     .counting-container {
       @include respond(tablet) {
+        -ms-flex-direction: row;
+        -moz-flex-direction: row;
+        -webkit-flex-direction: row;
+        -o-flex-direction: row;
         flex-direction: row;
+        -ms-gap: 7em;
+        -moz-gap: 7em;
+        -webkit-gap: 7em;
+        -o-gap: 7em;
         gap: 7em;
       }
 
       .counting-wrapper {
         @include respond(tablet) {
+          -ms-border-right: 4px solid $tertiary-neutral;
+          -moz-border-right: 4px solid $tertiary-neutral;
+          -webkit-border-right: 4px solid $tertiary-neutral;
           border-right: 4px solid $tertiary-neutral;
+          -o-border-right: 4px solid $tertiary-neutral;
+          padding-right: 2em;
           padding-inline-end: 2em;
         }
 
         p {
+          -ms-font-size: $font-size-xm;
+          -moz-font-size: $font-size-xm;
+          -webkit-font-size: $font-size-xm;
+          -o-font-size: $font-size-xm;
           font-size: $font-size-xm;
         }
         .counter {

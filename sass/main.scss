@@ -1,19 +1,17 @@
 @import 'abstract/mixin';
 @import 'abstract/variable';
 
-@import 'base/animation';
 @import 'base/reset';
 @import 'base/reused';
 
 @import 'components/menu';
+@import 'components/reveal';
 
 @import 'layout/footer';
 @import 'layout/header';
 
 @import 'pages/about';
 @import 'pages/blog';
-@import 'pages/contact';
-@import 'pages/home';
 
 @import 'sections/choose';
 @import 'sections/hero';

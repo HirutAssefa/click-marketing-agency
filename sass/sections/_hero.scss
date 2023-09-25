@@ -1,34 +1,77 @@
 .hero {
+  padding-top: 6em;
   padding-block-start: 6em;
 
   .container {
+    -webkit-display: grid;
+    -moz-display: grid;
+    -ms-display: grid;
+    -o-display: grid;
     display: grid;
+    -o-gap: 3em;
+    -ms-gap: 3em;
+    -moz-gap: 3em;
+    -webkit-gap: 3em;
     gap: 3em;
+
     @include respond(tablet) {
+      -ms-grid-columns: 1fr 1fr;
+      -moz-grid-columns: 1fr 1fr;
+      -webkit-grid-columns: 1fr 1fr;
+      -o-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+      -ms-align-items: center;
+      -moz-align-items: center;
+      -webkit-align-items: center;
+      -o-align-items: center;
       align-items: center;
+
+      -ms-gap: 4em;
+      -moz-gap: 4em;
+      -webkit-gap: 4em;
+      -o-gap: 4em;
       gap: 4em;
     }
 
     @include respond(laptop) {
+      -ms-gap: 8em;
+      -moz-gap: 8em;
+      -webkit-gap: 8em;
+      -o-gap: 8em;
       gap: 8em;
     }
 
     .hero-content {
-      .hero-title {
-        margin-block-start: 11px;
-        margin-block-end: 22px;
-
-        .hero-decor {
-          font-weight: $fw-medium;
-          color: $tertiary-neutral;
-        }
-      }
       @include respond(tablet) {
+        -ms-max-width: 465px;
+        -moz-max-width: 465px;
         max-width: 465px;
       }
+      .hero-title {
+        letter-spacing: 0.8rem;
+        .hero-decor {
+          color: $tertiary-neutral;
+        }
+
+        .hero__icon {
+          display: inline !important;
+          -webkit-animation: zoomIn 2s ease-in-out infinite;
+          -moz-animation: zoomIn 2s ease-in-out infinite;
+          -ms-animation: zoomIn 2s ease-in-out infinite;
+          -o-animation: zoomIn 2s ease-in-out infinite;
+          animation: zoomIn 2s ease-in-out infinite;
+          -webkit-transform-origin: center;
+          -moz-transform-origin: center;
+          -ms-transform-origin: center;
+          -o-transform-origin: center;
+          transform-origin: center;
+        }
+      }
+
       .hero-text {
+        margin-top: 40px;
         margin-block-start: 40px;
+        margin-bottom: 35px;
         margin-block-end: 35px;
         font-size: 1.8rem;
         line-height: 1.8;
@@ -38,22 +81,48 @@
         }
 
         @include respond(bg-desktop) {
+          margin-top: 3em;
+          margin-bottom: 3em;
           margin-block: 3em;
         }
       }
 
       .input-wrapper {
+        -webkit-display: flex;
+        -moz-display: flex;
+        -ms-display: flex;
+        -o-display: flex;
         display: flex;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
         flex-direction: column;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
         align-items: center;
+        -webkit-gap: 2em;
+        -moz-gap: 2em;
+        -ms-gap: 2em;
+        -o-gap: 2em;
         gap: 2em;
         font-size: 1.6rem;
+        margin-top: 3em;
         margin-block-start: 3em;
+
         .input-field {
+          padding-left: 2em;
+          padding-right: 2em;
           padding-inline: 2em;
           height: 3em;
           background-color: $white-bg-cl;
+          -webkit-border-radius: $radius-24;
+          -moz-border-radius: $radius-24;
           border-radius: $radius-24;
+          -webkit-outline: 1px solid $tertiary-bg-cl;
+          -moz-outline: 1px solid $tertiary-bg-cl;
           outline: 1px solid $tertiary-bg-cl;
           color: $grey-txt-clr;
 
@@ -62,6 +131,8 @@
           }
 
           &:focus {
+            -webkit-box-shadow: $box-shadow-input;
+            -moz-box-shadow: $box-shadow-input;
             box-shadow: $box-shadow-input;
           }
         }
@@ -80,15 +151,99 @@
 
     .hero-banner {
       img {
+        -webkit-border-radius: $radius-24;
+        -moz-border-radius: $radius-24;
         border-radius: $radius-24;
         overflow: hidden;
-      }
 
-      @include respond(tablet) {
-        img {
+        @media (min-width: 768px) {
           height: 350px;
         }
       }
     }
+  }
+}
+@-webkit-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@-moz-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@-ms-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@-o-keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
   }
 }

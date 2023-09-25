@@ -5,27 +5,54 @@
     }
 
     .grid-list {
+      -ms-gap: 2em;
+      -moz-gap: 2em;
+      -webkit-gap: 2em;
+      -o-gap: 2em;
       gap: 2em;
+
       @include respond(laptop) {
+        -ms-gap: 3em 4em;
+        -moz-gap: 3em 4em;
+        -webkit-gap: 3em 4em;
+        -o-gap: 3em 4em;
         gap: 3em 4em;
       }
 
       @include respond(bg-desktop) {
+        -ms-row-gap: 5em;
+        -moz-row-gap: 5em;
+        -webkit-row-gap: 5em;
+        -o-row-gap: 5em;
         row-gap: 5em;
       }
 
       .service-item {
+        -ms-box-shadow: $box-shadow-service;
+        -moz-box-shadow: $box-shadow-service;
+        -webkit-box-shadow: $box-shadow-service;
+        -o-box-shadow: $box-shadow-service;
         box-shadow: $box-shadow-service;
+        -ms-border-radius: $radius-24;
+        -moz-border-radius: $radius-24;
+        -webkit-border-radius: $radius-24;
+        -o-border-radius: $radius-24;
         border-radius: $radius-24;
+
         ion-icon {
           width: 40px;
           height: 40px;
           color: $tertiary-neutral;
         }
+
         .item-icon {
+          margin-left: auto;
+          margin-right: auto;
           margin-inline: auto;
 
           @include respond(laptop) {
+            margin-left: 0;
+            margin-right: 0;
             margin-inline: 0;
           }
         }
@@ -34,6 +61,8 @@
           margin-block: 2em 1em;
 
           @include respond(bg-desktop) {
+            margin-top: 2.5em;
+            margin-bottom: 1.5em;
             margin-block: 2.5em 1.5em;
           }
         }

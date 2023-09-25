@@ -4,24 +4,56 @@
   color: $secondary-txt-clr;
 
   .container {
+    -moz-gap: 3em;
+    -webkit-gap: 3em;
+    -o-gap: 3em;
+    -ms-gap: 3em;
     gap: 3em;
 
     @include respond(tablet) {
+      -moz-grid-template-columns: 1fr;
+      -webkit-grid-template-columns: 1fr;
+      -o-grid-template-columns: 1fr;
+      -ms-grid-template-columns: 1fr;
       grid-template-columns: 1fr;
     }
     .footer-top {
       background-color: $secondary-bg-cl;
+      -moz-border-radius: $radius-40;
+      -webkit-border-radius: $radius-40;
+      -o-border-radius: $radius-40;
+      -ms-border-radius: $radius-40;
       border-radius: $radius-40;
       padding: 30px;
+      -moz-gap: 3em;
+      -webkit-gap: 3em;
+      -o-gap: 3em;
+      -ms-gap: 3em;
       gap: 3em;
 
       @include respond(tablet) {
+        -moz-grid-template-columns: 1fr 1fr;
+        -webkit-grid-template-columns: 1fr 1fr;
+        -o-grid-template-columns: 1fr 1fr;
+        -ms-grid-template-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        -moz-column-gap: 9em;
+        -webkit-column-gap: 9em;
+        -o-column-gap: 9em;
+        -ms-column-gap: 9em;
         column-gap: 9em;
       }
 
       .footer-logo {
+        -moz-align-items: flex-start;
+        -webkit-align-items: flex-start;
+        -o-align-items: flex-start;
+        -ms-align-items: flex-start;
         align-items: flex-start;
+        -moz-gap: 1.8em;
+        -webkit-gap: 1.8em;
+        -o-gap: 1.8em;
+        -ms-gap: 1.8em;
         gap: 1.8em;
 
         img {
@@ -30,14 +62,34 @@
         }
 
         .social-list {
+          -moz-flex-direction: row;
+          -webkit-flex-direction: row;
+          -o-flex-direction: row;
+          -ms-flex-direction: row;
           flex-direction: row;
+          -moz-gap: 1em;
+          -webkit-gap: 1em;
+          -o-gap: 1em;
+          -ms-gap: 1em;
           gap: 1em;
         }
       }
 
       .company {
+        -moz-justify-content: flex-start;
+        -webkit-justify-content: flex-start;
+        -o-justify-content: flex-start;
+        -ms-justify-content: flex-start;
         justify-content: flex-start;
+        -moz-align-items: flex-start;
+        -webkit-align-items: flex-start;
+        -o-align-items: flex-start;
+        -ms-align-items: flex-start;
         align-items: flex-start;
+        -moz-gap: 1em;
+        -webkit-gap: 1em;
+        -o-gap: 1em;
+        -ms-gap: 1em;
         gap: 1em;
 
         h4 {
@@ -46,7 +98,15 @@
       }
 
       .lets-talk {
+        -moz-align-items: flex-start;
+        -webkit-align-items: flex-start;
+        -o-align-items: flex-start;
+        -ms-align-items: flex-start;
         align-items: flex-start;
+        -moz-gap: 1em;
+        -webkit-gap: 1em;
+        -o-gap: 1em;
+        -ms-gap: 1em;
         gap: 1em;
 
         a {
@@ -55,7 +115,15 @@
       }
 
       .contact {
+        -moz-align-items: flex-start;
+        -webkit-align-items: flex-start;
+        -o-align-items: flex-start;
+        -ms-align-items: flex-start;
         align-items: flex-start;
+        -moz-gap: 1em;
+        -webkit-gap: 1em;
+        -o-gap: 1em;
+        -ms-gap: 1em;
         gap: 1em;
       }
 
@@ -67,6 +135,11 @@
 
     .footer-bottom {
       color: $grey-txt-clr;
+
+      .footer__standard-name {
+        font-weight: $fw-bold;
+        color: $secondary-bg-cl;
+      }
     }
   }
 }
