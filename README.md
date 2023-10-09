@@ -7,7 +7,6 @@
   - [Table of Content](#table-of-content)
   - [Introduction](#introduction)
   - [Overview](#overview)
-    - [Screenshot](#screenshot)
     - [Links](#links)
     - [Website Teach You](#website-teach-you)
     - [Build With](#build-with)
@@ -29,10 +28,10 @@ Let's get started!
 
 ![img](/design/clickdesktop.JPG)
 
-### Screenshot
+<!-- ### Screenshot
 
 - Small screen: ![Mobile](./design/clickmobile.JPG)
-- large screen: ![Desk Top](./design/clickdesktop.JPG)
+- large screen: ![Desk Top](./design/clickdesktop.JPG) -->
 
 ### Links
 
