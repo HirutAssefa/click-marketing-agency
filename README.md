@@ -1,11 +1,10 @@
 # click-marketing-agency
-Welcome to Click Marketing Agency - Where Practical Learning Meets Real-World Web Building. Unlock web development skills with us!"
 
-# Click Marketing Agency Website
+Welcome to Click Marketing Agency - Where Practical Learning Meets Real-World Web Building. Unlock web development skills with us!"
 
 ## Table of Content
 
-- [Click Marketing Agency Website](#click-marketing-agency-website)
+- [click-marketing-agency](#click-marketing-agency)
   - [Table of Content](#table-of-content)
   - [Introduction](#introduction)
   - [Overview](#overview)
