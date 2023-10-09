@@ -60,7 +60,6 @@ html {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -130,12 +129,11 @@ select {
   *,
   *::before,
   *::after {
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-    -webkit-animation-duration: 0.01ms !important; /* Webkit prefix */
-    -webkit-transition-duration: 0.01ms !important; /* Webkit prefix */
-    animation-duration: 0.01ms !important;
+    -webkit-animation: none !important; /* Webkit prefix */
+    -webkit-transition: none !important; /* Webkit prefix */
+    animation: none !important;
+    transition: none !important;
   }
 }
 
@@ -173,7 +171,6 @@ body {
   font-family: $font-family;
   color: $primary-txt-clr;
   font-size: $font-size-s;
-  line-height: 1.8;
   /* prevent overlap with fixed header and navigation */
   padding-top: 4em;
   padding-block-start: 4em;

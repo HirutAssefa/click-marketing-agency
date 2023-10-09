@@ -77,7 +77,6 @@ html {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -147,12 +146,11 @@ select {
   *,
   *::before,
   *::after {
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-    -webkit-animation-duration: 0.01ms !important; /* Webkit prefix */
-    -webkit-transition-duration: 0.01ms !important; /* Webkit prefix */
-    animation-duration: 0.01ms !important;
+    -webkit-animation: none !important; /* Webkit prefix */
+    -webkit-transition: none !important; /* Webkit prefix */
+    animation: none !important;
+    transition: none !important;
   }
 }
 /* styles applied for this project only */
@@ -188,7 +186,6 @@ body {
   font-family: "Poppins", sans-serif;
   color: #000;
   font-size: 1.8rem;
-  line-height: 1.8;
   /* prevent overlap with fixed header and navigation */
   padding-top: 4em;
   padding-block-start: 4em;
@@ -203,45 +200,13 @@ desktop: 1200px, 75em
 bg-desktop: 1400px,87.5em
 */
 .container {
-  padding-left: 1.6em;
-  padding-right: 1.6em;
-  padding-inline: 1.6em;
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: 1em;
   margin-inline: auto;
-}
-@media only screen and (min-width: 35.9375em) {
-  .container {
-    max-width: 500px;
-    width: 100%;
-  }
-}
-@media only screen and (min-width: 48em) {
-  .container {
-    max-width: 720px;
-  }
-}
-@media only screen and (min-width: 62em) {
-  .container {
-    max-width: 960px;
-    padding-left: 4em;
-    padding-right: 4em;
-    padding-inline: 4em;
-  }
-}
-@media only screen and (min-width: 75em) {
-  .container {
-    max-width: 1140px;
-  }
-}
-@media only screen and (min-width: 87.5em) {
-  .container {
-    max-width: 1350px;
-  }
+  max-width: 1300px;
+  width: 100%;
 }
 
 .section {
-  padding-bottom: 5em;
   padding-block-end: 5em;
 }
 @media only screen and (min-width: 48em) {
@@ -256,18 +221,17 @@ bg-desktop: 1400px,87.5em
 }
 
 .header-spacing {
-  margin-bottom: 1em;
   margin-block-end: 1em;
 }
 
 .title {
   color: #000;
-  line-height: 1.2;
 }
 
 .h1 {
   font-size: 4.8rem;
-  line-height: 1.2;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
 }
 @media only screen and (min-width: 48em) {
   .h1 {
@@ -291,9 +255,9 @@ bg-desktop: 1400px,87.5em
 }
 
 .h2 {
+  font-family: "Playfair Display", serif;
   font-size: 3.8rem;
   font-weight: 500;
-  line-height: 1.1;
 }
 @media only screen and (min-width: 48em) {
   .h2 {
@@ -317,9 +281,9 @@ bg-desktop: 1400px,87.5em
 }
 
 .h3 {
+  font-family: "Playfair Display", serif;
   font-size: 2.8rem;
   font-weight: 400;
-  line-height: 1;
 }
 @media only screen and (min-width: 48em) {
   .h3 {
@@ -343,6 +307,7 @@ bg-desktop: 1400px,87.5em
 }
 
 .h4 {
+  font-family: "Playfair Display", serif;
   font-size: 2rem;
 }
 @media only screen and (min-width: 62em) {
@@ -364,9 +329,6 @@ bg-desktop: 1400px,87.5em
 .btn {
   background-color: #f0ad4e;
   height: 3em;
-  /* fallback */
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-inline: 2em;
   font-weight: 500;
   -moz-border-radius: 50em; /* Firefox */
@@ -437,14 +399,11 @@ bg-desktop: 1400px,87.5em
 }
 
 .section-text {
-  margin-bottom: 3em;
   margin-block-end: 3em;
 }
 @media only screen and (min-width: 48em) {
   .section-text {
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
     margin-inline: auto;
   }
 }
@@ -455,7 +414,6 @@ bg-desktop: 1400px,87.5em
 }
 @media only screen and (min-width: 87.5em) {
   .section-text {
-    margin-bottom: 6rem;
     margin-block-end: 6em;
   }
 }
@@ -712,10 +670,6 @@ figure {
 }
 .footer .container .footer-bottom {
   color: #777;
-}
-.footer .container .footer-bottom .footer__standard-name {
-  font-weight: 700;
-  color: #191970;
 }
 
 /* HEADER */
@@ -1368,12 +1322,11 @@ figure {
 }
 
 .hero {
-  margin-top: 6em;
   margin-block-start: 6em;
 }
 @media only screen and (min-width: 48em) {
   .hero {
-    margin-top: 10em;
+    margin-block-start: 10em;
   }
 }
 .hero .container {
@@ -1416,16 +1369,6 @@ figure {
     gap: 8em;
   }
 }
-@media only screen and (min-width: 48em) {
-  .hero .container .hero-content {
-    -ms-max-width: 465px;
-    -moz-max-width: 465px;
-    max-width: 465px;
-  }
-}
-.hero .container .hero-content .hero-title {
-  letter-spacing: 0.8rem;
-}
 .hero .container .hero-content .hero-title .hero-decor {
   color: #f0ad4e;
 }
@@ -1442,13 +1385,14 @@ figure {
   -o-transform-origin: center;
   transform-origin: center;
 }
+@media only screen and (min-width: 75em) {
+  .hero .container .hero-content .hero-title .hero__icon {
+    display: none !important;
+  }
+}
 .hero .container .hero-content .hero-text {
-  margin-top: 40px;
-  margin-block-start: 40px;
-  margin-bottom: 35px;
-  margin-block-end: 35px;
+  margin-block: 1em;
   font-size: 1.8rem;
-  line-height: 1.8;
 }
 @media only screen and (min-width: 87.5em) {
   .hero .container .hero-content .hero-text {
@@ -1457,9 +1401,7 @@ figure {
 }
 @media only screen and (min-width: 87.5em) {
   .hero .container .hero-content .hero-text {
-    margin-top: 3em;
-    margin-bottom: 3em;
-    margin-block: 3em;
+    margin-block: 1.1em;
   }
 }
 .hero .container .hero-content .input-wrapper {

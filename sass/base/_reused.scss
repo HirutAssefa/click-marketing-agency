@@ -7,40 +7,13 @@ bg-desktop: 1400px,87.5em
 */
 
 .container {
-  padding-left: 1.6em;
-  padding-right: 1.6em;
-  padding-inline: 1.6em;
-  margin-left: auto;
-  margin-right: auto;
+  padding-inline: 1em;
   margin-inline: auto;
-
-  @include respond(phone) {
-    max-width: 500px;
-    width: 100%;
-  }
-
-  @include respond(tablet) {
-    max-width: 720px;
-  }
-
-  @include respond(laptop) {
-    max-width: 960px;
-    padding-left: 4em;
-    padding-right: 4em;
-    padding-inline: 4em;
-  }
-
-  @include respond(desktop) {
-    max-width: 1140px;
-  }
-
-  @include respond(bg-desktop) {
-    max-width: 1350px;
-  }
+  max-width: 1300px;
+  width: 100%;
 }
 
 .section {
-  padding-bottom: $section-spacing;
   padding-block-end: $section-spacing;
 
   @include respond(tablet) {
@@ -54,18 +27,18 @@ bg-desktop: 1400px,87.5em
 }
 
 .header-spacing {
-  margin-bottom: $header-spacing;
   margin-block-end: $header-spacing;
 }
 
 .title {
   color: $primary-txt-clr;
-  line-height: 1.2;
 }
 
 .h1 {
   font-size: $font-size-h1-s;
-  line-height: 1.2;
+  font-family: 'Playfair Display', serif;
+  font-weight: $fw-medium;
+
   @include respond(tablet) {
     font-size: $font-size-h1-m;
   }
@@ -84,9 +57,9 @@ bg-desktop: 1400px,87.5em
 }
 
 .h2 {
+  font-family: 'Playfair Display', serif;
   font-size: $font-size-h2-sx;
   font-weight: $fw-medium;
-  line-height: 1.1;
 
   @include respond(tablet) {
     font-size: $font-size-h2-s;
@@ -106,9 +79,9 @@ bg-desktop: 1400px,87.5em
 }
 
 .h3 {
+  font-family: 'Playfair Display', serif;
   font-size: $font-size-h3-sx;
   font-weight: $fw-regular;
-  line-height: 1;
 
   @include respond(tablet) {
     font-size: $font-size-h3-s;
@@ -128,6 +101,7 @@ bg-desktop: 1400px,87.5em
 }
 
 .h4 {
+  font-family: 'Playfair Display', serif;
   font-size: $font-size-h4-s;
 
   @include respond(laptop) {
@@ -146,9 +120,6 @@ bg-desktop: 1400px,87.5em
 .btn {
   background-color: $tertiary-neutral;
   height: 3em;
-  /* fallback */
-  padding-left: 2rem;
-  padding-right: 2rem;
   padding-inline: 2em;
   font-weight: $fw-medium;
   -moz-border-radius: $radius-500; /* Firefox */
@@ -220,13 +191,10 @@ bg-desktop: 1400px,87.5em
 }
 
 .section-text {
-  margin-bottom: 3em;
   margin-block-end: 3em;
 
   @include respond(tablet) {
     max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
     margin-inline: auto;
   }
 
@@ -235,7 +203,6 @@ bg-desktop: 1400px,87.5em
   }
 
   @include respond(bg-desktop) {
-    margin-bottom: 6rem;
     margin-block-end: 6em;
   }
 }

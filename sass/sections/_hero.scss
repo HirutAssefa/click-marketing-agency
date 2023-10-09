@@ -1,9 +1,8 @@
 .hero {
-  margin-top: 6em;
   margin-block-start: 6em;
 
   @include respond(tablet) {
-    margin-top: 10em;
+    margin-block-start: 10em;
   }
 
   .container {
@@ -46,13 +45,7 @@
     }
 
     .hero-content {
-      @include respond(tablet) {
-        -ms-max-width: 465px;
-        -moz-max-width: 465px;
-        max-width: 465px;
-      }
       .hero-title {
-        letter-spacing: 0.8rem;
         .hero-decor {
           color: $tertiary-neutral;
         }
@@ -69,25 +62,23 @@
           -ms-transform-origin: center;
           -o-transform-origin: center;
           transform-origin: center;
+
+          @include respond(desktop) {
+            display: none !important;
+          }
         }
       }
 
       .hero-text {
-        margin-top: 40px;
-        margin-block-start: 40px;
-        margin-bottom: 35px;
-        margin-block-end: 35px;
+        margin-block: 1em;
         font-size: 1.8rem;
-        line-height: 1.8;
 
         @include respond(bg-desktop) {
           font-size: $font-size-xm;
         }
 
         @include respond(bg-desktop) {
-          margin-top: 3em;
-          margin-bottom: 3em;
-          margin-block: 3em;
+          margin-block: 1.1em;
         }
       }
 

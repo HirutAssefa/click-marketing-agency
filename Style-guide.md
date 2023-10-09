@@ -10,16 +10,7 @@ The designs were created to the following widths:
 - desktop: 1200px
 - bg-desktop: 1400px
 
-## Typography
-
-### Text Colors
-
-- primary-txt-clr: #000;
-- secondary-txt-clr: #fff;
-- tertiary-txt-clr: #444;
-- grey-txt-clr: #777;
-
-### Background Colors
+## Background Colors
 
 - primary-bg-cl: #d1d1e2;
 - secondary-bg-cl: #191970;
@@ -30,13 +21,22 @@ The designs were created to the following widths:
 - white-bg-100: #fff;
 - black-bg-cl: #000;
 
-## Font Weight
+## Typography
+
+### Text Colors
+
+- primary-txt-clr: #000;
+- secondary-txt-clr: #fff;
+- tertiary-txt-clr: #444;
+- grey-txt-clr: #777;
+
+### Font Weight
 
 - fw-regular: 400;
 - fw-medium: 500;
 - fw-bold: 700;
 
-## Font Size
+### Font Size
 
 - font-size-xs: 1.4rem;
 - font-size-xxs: 1.6rem;
@@ -72,43 +72,45 @@ The designs were created to the following widths:
 - font-size-h4-l: 2.4rem;
 - font-size-h4-xl: 2.6rem;
 
-## Font Family
+### Font Family
 
 - font-family: 'Poppins', sans-serif;
 
-## Spacing
+Font-family: [Inter](https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Lato&family=Poppins:wght@400;500;600;700&display=swap);
+
+## Visual Effects
+
+### Spacing
 
 - section-spacing: 5em;
 - header-spacing: 1em;
 
-## Border Radius
+### Border Radius
 
 - radius-24: 24px;
 - radius-40: 40px;
 - radius-500: 50em;
 
-## Transition
+### Transition
 
 - transition-1: all 250ms ease;
 - transition-2: all 500ms ease;
 - cubic-out: cubic-bezier(0, 1, 0.5, 1);
 
-## Box shadow
+### Box shadow
 
 - box-shadow-neutral: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
 - box-shadow-adv: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
   rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
 - box-shadow-input: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
   rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
 - box-shadow-service: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
   rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
-### Font
-
-- Family: [Be Vietnam Pro](https://fonts.googleapis.com)
-- Weights: 400, 500, 700
-
-## Icons
+### Icons
 
 For the social icons, you can use the icons provided or a font icon library. Some suggestions for font icon libraries can be found below:
 

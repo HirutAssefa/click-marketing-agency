@@ -76,3 +76,6 @@ function checkScroll() {
 
 window.addEventListener('scroll', checkScroll);
 /* REVEAL EFFECT END */
+
+
+
