@@ -38,8 +38,7 @@ Let's get started!
 
 - Source Code: [github](https://github.com/HirutAssefa/Click-Marketing-Agency-Website)
 
-- Live Site URL: [github](https://www.HirutAssefa.io/Click-Marketing-Agency-Website)
-<!-- - Live Site URL: [Live Demo](https://Click-Marketing-Agency-Website.netlify.app/) -->
+- Live Site URL: [Live Demo](https://Click-Marketing-Agency-Website.netlify.app/)
 
 ### Website Teach You
 
